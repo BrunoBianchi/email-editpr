@@ -1,0 +1,177 @@
+
+.container {
+
+    #inline-editor {
+            margin-top:80px;
+            border-radius:3px;
+            border:2px dashed rgba(86, 74, 147, 0.559);
+            #inline-close {
+                outline: none;
+                border:none;
+                width:20px;
+                height: 20px;
+                font-size:20px;
+                position:absolute;
+                margin-top:-70px;
+                margin-left:130px;
+                background-color: transparent;
+                z-index:1;
+
+                color:	#da7272;
+                &:hover {
+                    color:	#dd4343;
+                }
+            }
+            #inline-delete {
+                outline: none;
+                border:none;
+                width:20px;
+                height: 20px;
+                font-size:20px;
+                position:absolute;
+                margin-top:-40px;
+                margin-left:130px;
+                background-color: transparent;
+                z-index:1;
+
+                color:	#da7272;
+                &:hover {
+                    color:	#dd4343;
+                }
+            }
+        ul {
+            display: inline;
+            list-style-type: none;
+            overflow: hidden;
+            position: absolute;
+            padding:5px;
+            margin-top:-70px;
+            
+            z-index:0;
+            background-color: rgba(210, 207, 207, 0.849);
+            border-radius:3px;
+            li {
+                float: left;
+                margin:0;
+                padding:10;
+                border-radius:3px;
+                background-color:rgb(176, 174, 174); 
+                margin-left:8px;
+                #inline-editor-btn {
+                    float:left;
+                    outline: none;
+                    padding: 10px;
+                    border: none;
+                    border-radius: 5px;
+                    background-color: transparent;
+                    display: block;
+                    &:hover {
+                        background-color: rgba(148, 148, 148, 0.941);
+                    }
+
+                    font-size: 20px;
+                }
+
+                #inline-editor-btn-clicked {
+                    float:left;
+                    outline: none;
+                    padding: 10px;
+                    border: none;
+                    border-radius: 5px;
+                    background-color: rgba(164, 164, 164, 0.941);
+                    display: block;
+                    &:hover {
+                        background-color: rgba(186, 185, 185, 0.941);
+                    }
+
+                    font-size: 20px;
+                }
+
+
+            }
+
+        }
+
+        input {
+            padding: 7px;
+            border: none;
+            border-bottom: 2px solid rgba(218, 218, 218, 0.941);
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+    }
+
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 150px;
+
+    .editor {
+        border-radius: 2px;
+        border: 3px dashed rgb(218, 218, 218);
+        width: 100%;
+        height: auto;
+        padding: 10px;
+
+        .component {
+            padding: 5px;
+
+            .example-handle {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                color: #ccc;
+                cursor: move;
+                width: 24px;
+                height: 24px;
+            }
+
+            &:hover {
+                cursor: pointer;
+                border-radius: 2px;
+                outline: 2px solid #569cc52c;
+            }
+
+        }
+
+        .component-placeholder {
+            border-radius: 2px;
+            border: dotted 3px #569cc5bd;
+            background-color: #569cc52b;
+            padding: 5px;
+            min-height: 60px;
+            width: 100%;
+            height: 100%;
+        }
+
+
+
+    }
+
+    .sidebar-blocks {
+        background-color: rgb(202, 202, 202);
+
+        ul {
+            background-color: rgb(202, 202, 202);
+            list-style: none;
+            margin: 0;
+
+            li {
+                background-color: rgb(202, 202, 202);
+                margin-top: 30px;
+
+                button {
+                    padding: 10px;
+                    outline: none;
+                    border-radius: 5px;
+                    width: 50px;
+                    border: 3px solid rgb(218, 218, 218);
+                    background-color: white;
+                }
+            }
+        }
+    }
+
+}

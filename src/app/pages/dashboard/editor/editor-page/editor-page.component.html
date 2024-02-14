@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-8">
+            <div class="editor">
+                <div cdkDropList class="components" (cdkDropListDropped)="drop($event)" >
+                    @for (movie of movies; track movie) {
+                    <div class="component" cdkDrag [innerHTML]="movie|htmlRender" (click)="editHTML($event)" >
+                        <div class="component-placeholder"  *cdkDragPlaceholder></div>
+                        
+
+                    </div>
+                    
+                    }
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-3">
+            
+
+            <ul>
+                @if(canEdit) {
+                <li>
+                    <button data-bs-toggle="collapse" data-bs-target="#demo">Collapsible</button>
+                    <div  id="demo" class="collapse">
+                        <div class="mb-3">
+                            <label for="form-align" class="form-label">Align</label>
+                            <select id="form-align" (change)="editElement($event,'text-align')">
+                                <option value="center">center</option>
+                                <option value="right">right</option>
+                                <option value="left">left</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="form-align" class="form-label">width</label>
+                            <input class="form-control" id="form-text" [value]="currentHtmlElement?.style.width"
+                                (change)="editElement($event,'width')">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleColorInput" class="form-label">Color picker</label>
+                            <input (input)="editElement($event,'color')" type="color" class="form-control form-control-color" id="exampleColorInput"
+                                 title="Choose your color">
+                        </div>
+
+                    </div>
+                </li>
+                }
+            </ul>
+
+        </div>
+
+    </div>
+</div>
